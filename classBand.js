@@ -1,6 +1,6 @@
 import fs from "fs";
 
-import Band2 from "./classBand2.js"
+import classBand2 from "./classBand2.js"
 
 export default class Band {
   bandList = [];
@@ -17,7 +17,7 @@ export default class Band {
     const data = JSON.parse(jsonString);
 
     for (let i = 0; i < data.length; i++) {
-      this.bandList.push(new Band2(data[i]));
+      this.bandList.push(new classBand2(data[i]));
 
     }
   }
@@ -29,7 +29,7 @@ export default class Band {
   }
 
   addBandToList(bandName, infoTextB, bandStarted, bandFinished, bandAge, members, formerMembers) {
-    this.bandList.push(new Band2(bandName, infoTextB, bandStarted, bandFinished, bandAge, members, formerMembers));
+    this.bandList.push(new classBand2(bandName, infoTextB, bandStarted, bandFinished, bandAge, members, formerMembers));
     this.updateJsonFile();
   }
   removeBandFromList(index) {

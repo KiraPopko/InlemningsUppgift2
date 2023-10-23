@@ -1,5 +1,5 @@
 import fs from "fs";
-import Musiker2 from "./classMusiker2.js"
+import classMusiker2 from "./classMusiker2.js"
 
 export default class Musiker {
   musikantList = [];
@@ -16,7 +16,7 @@ export default class Musiker {
     const data = JSON.parse(jsonString);
 
     for (let i = 0; i < data.length; i++) {
-      this.musikantList.push(new Musiker2(data[i]));
+      this.musikantList.push(new classMusiker2(data[i]));
 
     }
   }
@@ -28,7 +28,7 @@ export default class Musiker {
   }
 
   addMusikerToList(name, infoText, birthYear, instrument, bandNow) {
-    this.musikantList.push(new Musiker2(name, infoText, birthYear, instrument, bandNow));
+    this.musikantList.push(new classMusiker2(name, infoText, birthYear, instrument, bandNow));
     this.#updateJsonFile();
   }
   removeMusikerFromList(index) {

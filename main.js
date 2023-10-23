@@ -9,8 +9,8 @@ while (run) {
   const musikantList = new Musiker();
   const bandList = new Band();
   console.log(`
-    Menu for band
-  1.  Add a new musician
+    Menu for bands and musicians:
+  1. Add a new musician
   2. Add a new band
  `)
 
@@ -28,8 +28,8 @@ while (run) {
       } else {
         console.log("Ett nytt namn måste innehålla 4 symboler!");
       }*/
-
       const birthYear = prompt();
+
       /*console.log("What kind of musical instrument playing? ")
       const instrument = prompt();
       console.log("Which band playing now? ")
@@ -60,7 +60,7 @@ while (run) {
       console.log("Members in the group: ")
       const members = prompt();
 
-      console.log("Former members in the badn ")
+      console.log("Former members in the group:  ")
       const formerMembers = prompt();
 
       bandList.addBandToList(bandName, infoTextB, bandStarted, bandFinished, bandAge, members, formerMembers);
