@@ -5,10 +5,46 @@
   "Year finished": "8",
   "Band age": 3,
   "Now band member": [
-   "g"
+   [
+    [
+     "g"
+    ]
+   ]
   ],
   "Before band member": [
-   "f"
+   [
+    [
+     "f"
+    ]
+   ]
+  ]
+ },
+ {
+  "bandName": "4",
+  "Year started": "4",
+  "Year finished": "4",
+  "Band age": 0,
+  "Now band member": [
+   [
+    "4"
+   ]
+  ],
+  "Before band member": [
+   [
+    "4"
+   ]
+  ]
+ },
+ {
+  "bandName": "4",
+  "Year started": "4",
+  "Year finished": "5",
+  "Band age": 1,
+  "Now band member": [
+   "5"
+  ],
+  "Before band member": [
+   "5"
   ]
  }
 ]

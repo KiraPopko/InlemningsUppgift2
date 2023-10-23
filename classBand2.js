@@ -99,12 +99,12 @@ export default class Band {
     };
   };
   fromDataInfo(data) {
-    this.bandName = data.bandName;
-    this.infoTextB = data.infoTextB;
-    this.bandStarted = data.bandStarted;
-    this.bandFinished = data.bandFinished;
-    this.bandAge = data.bandAge;
-    this.members = data.members;
-    this.formerMembers = data.formerMembers;
+    this.bandName = data["bandName"];
+    this.infoTextB = data["infoText"];
+    this.bandStarted = data["Year started"];
+    this.bandFinished = data["Year finished"];
+    this.bandAge = data["Band age"];
+    this.members = data["Now band member"];
+    this.formerMembers = data["Before band member"];
   }
 }

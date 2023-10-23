@@ -17,7 +17,11 @@ export default class Band {
     const data = JSON.parse(jsonString);
 
     for (let i = 0; i < data.length; i++) {
-      this.bandList.push(new classBand2(data[i]));
+      const n = new classBand2();
+      n.fromDataInfo(data[i]);
+      this.bandList.push(n);
+
+      //this.bandList.push(new classBand2(data[i]));
 
     }
   }

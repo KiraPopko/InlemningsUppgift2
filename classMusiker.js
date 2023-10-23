@@ -16,7 +16,12 @@ export default class Musiker {
     const data = JSON.parse(jsonString);
 
     for (let i = 0; i < data.length; i++) {
-      this.musikantList.push(new classMusiker2(data[i]));
+      const n = new classMusiker2();
+      n.fromDataInfo(data[i]);
+
+      this.musikantList.push(n);
+
+      //this.musikantList.push(new classMusiker2(data[i]));
 
     }
   }
@@ -48,6 +53,18 @@ export default class Musiker {
   }
   getLength() {
     return this.musikantList.length;
+  }
+
+  checkMusikant(name) {
+
+    for (let index = 0; index < this.musikantList.length; index++) {
+
+      const element = this.musikantList[index];
+      if (element.name == name) {
+        return true
+      }
+    }
+    return false;
   }
 
 }

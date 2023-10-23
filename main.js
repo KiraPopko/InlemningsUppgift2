@@ -10,7 +10,7 @@ while (run) {
   const bandList = new Band();
   console.log(`
     Menu for band
-  1.  Add a new musician
+  1. Add a new musician
   2. Add a new band
  `)
 
@@ -18,7 +18,12 @@ while (run) {
   switch (options.trim()) {
     case "1":
       console.log("What is the musician name? ");
-      const namn = prompt();
+      const name = prompt(); {
+        if (musikantList.checkMusikant(name) == true) {
+          console.log("Musician exists");
+          continue;
+        }
+      }
       console.log("Give some information about musician? ");
       const infoText = prompt();
       console.log("What year was the musiciant born? ");
@@ -41,7 +46,12 @@ while (run) {
 
     case "2":
       console.log("What is the band name? ");
-      const bandName = prompt();
+      const bandName = prompt(); {
+        if (musikantList.checkMusikant(bandName) == true) {
+          console.log("Musician exists");
+          continue;
+        }
+      }
 
       console.log("Give some information about the band? ");
       const infoTextB = prompt();

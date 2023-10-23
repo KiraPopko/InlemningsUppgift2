@@ -10,7 +10,7 @@ export default class Musiker2 {
 
   constructor(name, infoText, birthYear, instrument, bandNow) {
 
-    this.namn = name;
+    this.name = name;
     this.infoText = infoText;
     this.birthYear = birthYear;
     this.instrument = instrument;
@@ -19,11 +19,11 @@ export default class Musiker2 {
   }
 
   get name() {
-    return this.namn;
+    return this.name;
   }
 
   set name(newName) {
-    this.namn = newName;
+    this.name = newName;
   }
   get infoText() {
     return this.infoText
@@ -41,7 +41,7 @@ export default class Musiker2 {
     if (isNaN(newBirthYear.length = 4)) {
       this.birthYear = newBirthYear;
     } else {
-      console.log("Ett nytt namn måste innehålla 4 symboler!");
+      console.log("Ett nytt name måste innehålla 4 symboler!");
     }
     //this.birthyear = newBirthYear;
   }
@@ -72,7 +72,7 @@ export default class Musiker2 {
   // Används när vi ska skicka in till "Hundar.json". 
   dataInfo() {
     return {
-      "name": this.namn,
+      "name": this.name,
       "infoText": this.infoText,
       "birthyear": this.birthYear,
       "Instrument musicant playing": [this.instrument],
@@ -81,12 +81,12 @@ export default class Musiker2 {
 
     };
   }
-  FormDataInfo(data) {
-    this.namn = data.namn;
-    this.infoText = data.infoText;
-    this.birthYear = data.birthYear;
-    this.instrument = data.instrument;
-    this.bandNow = data.bandNow;
-    this.bandBefore = data.bandBefore;
+  fromDataInfo(data) {
+    this.name = data["name"];
+    this.infoText = data["infoText"];
+    this.birthYear = data["birthyear"];
+    this.instrument = data["Instrument musicant playing"];
+    this.bandNow = data["Now band member"];
+    this.bandBefore = data["Before band membe"];
   }
 } 
