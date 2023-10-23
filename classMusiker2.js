@@ -1,6 +1,5 @@
 export default class Musiker2 {
 
-  id;
   name;
   infoText;
   birthYear;
@@ -9,14 +8,14 @@ export default class Musiker2 {
   bandBefore;
 
 
-  constructor(id, name, infoText, birthYear, instrument, bandNow) {
-    this.id = id;
+  constructor(name, infoText, birthYear, instrument, bandNow) {
+
     this.namn = name;
     this.infoText = infoText;
     this.birthYear = birthYear;
     this.instrument = instrument;
-    this.bandNow = bandNow
-    this.bandBefore = this.bandBefore
+    this.bandNow = bandNow;
+    this.bandBefore = this.bandBefore;
   }
 
   get name() {
