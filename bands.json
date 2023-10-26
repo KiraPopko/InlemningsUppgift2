@@ -1,0 +1,29 @@
+[
+  {
+    "bandId": "id1698348570712",
+    "name": "Kubraa",
+    "Bandformed": "1997",
+    "Disbandment": "2023-10-26 22:56:13",
+    "CurrentBandMember": [],
+    "PreviousBandmebersIn": [
+      {
+        "memberId": "id1698348027890",
+        "name": "Vivian",
+        "instrument": "bongo",
+        "yearJoined": "1997"
+      }
+    ],
+    "info": "Bongo is the Mexican band with nice dancers."
+  },
+  {
+    "bandId": "id1698348701265",
+    "name": "bongo",
+    "Bandformed": "1880",
+    "Disbandment": "2023-10-26 22:56:13",
+    "CurrentBandMember": [],
+    "PreviousBandmebersIn": [
+      null
+    ],
+    "info": "bongo band is perfect for jazz lovers"
+  }
+]
