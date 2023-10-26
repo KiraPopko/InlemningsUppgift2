@@ -1,6 +1,6 @@
 
 import fs from "fs";
-import Bands2 from "./bands2.js"; //Band
+import Bands2 from "./bands2.js";
 
 export default class Bands {
   bandList = [];
@@ -20,22 +20,21 @@ export default class Bands {
 
     for (let i = 0; i < data.length; i++) {
       this.bandList.push(data[i]);
-      //this.bandList.push(new Bands2(data[i])); //Band
+      //this.bandList.push(new Bands2(data[i])); 
     }
   }
 
 
   getLength() {
-    //return this.bandList;
     return this.bandList.length;
   }
 
   createBand(name, created, id, musicianName, instrument, info) {
-    const newBands = new Bands2(name, created, id, musicianName, instrument, info); //Bands2
+    const newBands = new Bands2(name, created, id, musicianName, instrument, info);
     this.bandList.push(newBands.dataInfo());
     return newBands.dataInfo().bandId;
   }
-  //det behöver inte vara exakt samma namn i creatBand
+  d
 
   writeJson() {
     fs.writeFileSync('./bands.json', JSON.stringify(this.bandList, null, 2), (err) => {
@@ -65,7 +64,7 @@ export default class Bands {
     return temp;
   }
 
-  displayCurrentMember(bandIndex) { //måste adders
+  displayCurrentMember(bandIndex) {
     const band = this.bandList[bandIndex].CurrentBandMember;
     const currentMember = [];
     for (let i = 0; i < band.length; i++) {

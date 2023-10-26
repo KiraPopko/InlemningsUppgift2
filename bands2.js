@@ -1,5 +1,5 @@
 export default class Bands2 {
-  //årtal skapades, upphörde, lista om bandmedlemmar och vilka instrument, lista över tidigare medlemmar
+
   name;
   bandformed;
   disbandment;

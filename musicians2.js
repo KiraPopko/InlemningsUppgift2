@@ -1,4 +1,4 @@
-export default class Musicians2 { //Musician
+export default class Musicians2 {
   name;
   birthyear;
   instrument;
@@ -24,7 +24,7 @@ export default class Musicians2 { //Musician
 
   dataInfo() {
     return {
-      "musicianId": 'id' + new Date().getTime(), ///Why musicianId not in ""
+      "musicianId": 'id' + new Date().getTime(),
       "name": this.name,
       "birthyear": this.birthyear,
       "Age": this.birthyearToAge(this.birthyear),
