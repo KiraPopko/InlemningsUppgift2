@@ -27,7 +27,7 @@ export default class Bands2 {
       "name": this.name,
       "Bandformed": this.bandformed,
       "Disbandment": null,
-      "CurrentBandMember": [{ memberId: this.memberId, name: this.bandmembers, instrument: this.instrument, yearJoined: this.bandformed }],
+      "CurrentBandMember": [{ memberId: this.memberId, name: this.bandmembers, instrument: this.instrument, yearJoined: this.bandformed }], //this.bandformed
       "PreviousBandmebersIn": [],
       "info": this.info
     }

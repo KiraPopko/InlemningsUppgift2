@@ -19,7 +19,8 @@ export default class Bands {
     const data = JSON.parse(jsonString);
 
     for (let i = 0; i < data.length; i++) {
-      this.bandList.push(new Bands2(data[i])); //Band
+      this.bandList.push(data[i]);
+      //this.bandList.push(new Bands2(data[i])); //Band
     }
   }
 
@@ -84,7 +85,6 @@ export default class Bands {
     this.bandList[bandIndex].CurrentBandMember.splice(this.bandList[bandIndex].CurrentBandMember.findIndex(x => x.memberId === musicianId), 1);
     if (this.bandList[bandIndex].CurrentBandMember.length === 0) {
       this.bandList[bandIndex].Disbandment = date;
-
     }
   }
 

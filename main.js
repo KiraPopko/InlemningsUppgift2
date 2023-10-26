@@ -7,7 +7,7 @@ const prompt = PromptSync({ sigint: true });
 let run = true;
 while (run) {
   const musicianList = new Musicians();
-  const bandList = new Bands(); //???
+  const bandList = new Bands();
 
   console.log(`
     Menu options:
@@ -19,35 +19,30 @@ while (run) {
   C. Close the programm
  `)
 
-  //looopa igenom hela listan - välj en
-
-  // 2. Remove an musician funkar fram till att jag skriver ut ett namn. 
   const options = prompt();
   switch (options.trim().toUpperCase()) {
     case "1":
       console.log("What is the musician name? ");
-      const someName = prompt(); {
-        if (musicianList.checkMusikant(name) == true) {
+      let someName = prompt(); {
+        if (musicianList.checkMusikant(someName) == true) {
           console.log("Musician exists");
           continue;
         }
       }
-      console.log("What year was the musician born?");
 
+      console.log("What year was the musician born?");
       const birthyear = prompt();
-      if (isNaN(birthyear.length === 4)) { //|| !isNaN(birthyear)) {
-        //birthyear = newBirthYear
-        //if (!isNaN(newBirthYear) || newBirthYear.length === 4) {
-        // birthyear = newBirthYear;
+      if (isNaN(birthyear.length === 4)) {
       } else {
         console.log("Year should consist of 4 numbers!");
       }
-      //     console.log("How old is the musician?");
-      //   console.log(musicianList.birthyearToAge(birthyear));
+
       console.log("What instrument does the musician play?");
       let instrument = prompt();
+
       console.log("Give some information about musician?");
       const info = prompt();
+
       musicianList.addMusicianToList(someName, birthyear, instrument, info);
       break;
 
@@ -56,28 +51,30 @@ while (run) {
         console.log('The list is empty');
       } else {
         musicianList.displayAllMusicians()
+        console.log("Add index of musician")
         const options = prompt();
         if (options < 0 || options > musicianList.getLength() || isNaN(options)) {
           console.log('Choice is not available');
         } else {
           musicianList.displayOneMusicians(options);
+
         }
       }
       break;
-    //ÄNDRA TILL ENGELSKA PÅ STRANGARNA!!!!!
+
     case "3":
       if (musicianList.getLength() === 0) {
         console.log("There are no musicians yet'");
       } else {
         musicianList.displayAllMusicians()
-        let options = prompt('Add your first bandmember'); //skriv text inne i()
+        let options = prompt('Add your first bandmember: '); //skriv text inne i()
         if (options < 0 || options > musicianList.getLength() || isNaN(options)) { //getLength
           console.log('This choice not exist');
         } else {
-          let bandName = prompt('What is the name of the band?');
-          let created = prompt('When was the band created?(yyyymm)');
-          let instrument = prompt('What instrument does the musician play in this band?');
-          console.log("Info about the musician?");
+          let bandName = prompt('What is the name of the band? ');
+          let created = prompt('When was the band created?(yyyy) ');
+          let instrument = prompt('What instrument does the musician play in this band? ');
+          console.log("Info about the band? ");
           let info = prompt();
           musicianList.createBand(options, bandName, created, instrument, info);
         } //använd let istället för const???
@@ -124,15 +121,16 @@ while (run) {
         } else {
           const option1 = prompt('Select the band you want to have: ')
           if (option1 < 0 || option1 > tempBand.length || isNaN(option1)) {
-            console.log('This choice does not exist!')
+            console.log('This option does not exist!')
           } else {
             const tempMusician = bandList.displayCurrentMember(tempBand[option1].index)
             const option2 = prompt('Which musician would you like to remove: ')
             if (option2 < 0 || option2 > tempMusician.length || isNaN(option2)) {
-              console.log('This choice does not exist!');
+              console.log('This option does not exist!');
             } else {
               musicianList.removeMusician(tempBand[option1].bandId, tempBand[option1].index, tempMusician[option2])
             }
+
           }
         }
       }
