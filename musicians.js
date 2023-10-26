@@ -75,7 +75,7 @@ export default class Musicians { //Musician
   }
   addMusicianToBand(musicianIndex, instrument, bandId, bandName) {
     let date = new Date().getFullYear();
-    this.editMusicianList(musicianIndex, instrument, bandId, bandName);
+    this.editMusicList(musicianIndex, instrument, bandId, bandName);
     this.bands.editBandList(this.bands.bandList.findIndex(x => x.bandId === bandId), this.musicianList[musicianIndex].musicianId, this.musicianList[i].name, instrument, date) //band
     this.bands.writeJson(); //band
     this.writeJson();

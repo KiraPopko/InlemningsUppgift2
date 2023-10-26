@@ -18,16 +18,13 @@ export default class Bands2 {
     this.info = info;
   }
 
-
-  // Skapar ett objekt med denna hundens egenskaps information. 
-  // Används när vi ska skicka in till "Hundar.json". 
   dataInfo() {
     return {
       "bandId": 'id' + new Date().getTime(),
       "name": this.name,
       "Bandformed": this.bandformed,
       "Disbandment": null,
-      "CurrentBandMember": [{ memberId: this.memberId, name: this.bandmembers, instrument: this.instrument, yearJoined: this.bandformed }], //this.bandformed
+      "CurrentBandMember": [{ memberId: this.memberId, name: this.bandmembers, instrument: this.instrument, yearJoined: this.bandformed }],
       "PreviousBandmebersIn": [],
       "info": this.info
     }
