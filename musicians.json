@@ -1,0 +1,44 @@
+[
+  {
+    "musicianId": "id1698308411383",
+    "name": "as",
+    "birthyear": "as",
+    "Age": null,
+    "info": "as",
+    "Instrument": [
+      "as"
+    ],
+    "BandmemberIn": [
+      {
+        "bandName": "as",
+        "bandId": "id1698310672484",
+        "Joined": "asdd"
+      }
+    ],
+    "PreviousBandmemberIn": []
+  },
+  {
+    "musicianId": "id1698309300310",
+    "name": "1",
+    "birthyear": "1",
+    "Age": 22,
+    "info": "1",
+    "Instrument": [
+      "1",
+      "piano"
+    ],
+    "BandmemberIn": [
+      {
+        "bandName": "hej",
+        "bandId": "id1698310517400",
+        "Joined": "1990"
+      },
+      {
+        "bandName": "Avva",
+        "bandId": "id1698339326966",
+        "Joined": "123456"
+      }
+    ],
+    "PreviousBandmemberIn": []
+  }
+]

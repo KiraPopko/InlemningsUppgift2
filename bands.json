@@ -1,0 +1,18 @@
+[
+  {
+    "bandId": "id1698339326966",
+    "name": "Avva",
+    "Bandformed": "123456",
+    "Disbandment": null,
+    "CurrentBandMember": [
+      {
+        "memberId": "id1698309300310",
+        "name": "1",
+        "instrument": "piano",
+        "yearJoined": "123456"
+      }
+    ],
+    "PreviousBandmebersIn": [],
+    "info": "asdd"
+  }
+]
